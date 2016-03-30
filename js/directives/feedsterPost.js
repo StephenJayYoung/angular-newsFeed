@@ -1,5 +1,13 @@
-<img class="avatar" ng-src="{{posts.author.avatar}}"  >
-<h3 class="author-name">{{posts.author.name}} </h3>
-<p class="comment-text"> {{posts.comment.text}}</p>
-<img class="comment-img" ng-src="{{posts.comment.img}}"  >
+app.directive('feedsterPost', function() { 
+  return { 
+    restrict: 'E', 
+    scope: { 
+      post: '=' 
+      // The post value is what is going to be shown in the index.html, 
+      // as well as the first value used in dot notation in the html directive
+    }, 
+    templateUrl: 'js/directives/feedsterPost.html'
+  }; 
+});
+
 
